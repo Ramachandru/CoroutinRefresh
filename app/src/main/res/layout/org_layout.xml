@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="orgdata"
+            type="com.ram.kotlincoroutinerefresh.model.OrgModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <TextView
+    android:textColor="@color/black"
+    android:textSize="17sp"
+    android:text="@{orgdata.login}"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:text="@{orgdata.id}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:text="@{orgdata.members_url}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:text="@{orgdata.description}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+</LinearLayout>
+    </layout>
