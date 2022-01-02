@@ -19,7 +19,7 @@ class OrgAdapter (context : Context): RecyclerView.Adapter<OrgAdapter.OrgViewHol
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrgAdapter.OrgViewHolder {
         val inflater=LayoutInflater.from(parent.context)
         val orgLayoutBinding = OrgLayoutBinding.inflate(inflater,null,false)
-        return OrgViewHolder(orgLayoutBinding)
+        return OrgViewHolder(orgLayoutBinding,mContext!!)
     }
 
     override fun onBindViewHolder(holder: OrgAdapter.OrgViewHolder, position: Int) {
@@ -29,7 +29,7 @@ class OrgAdapter (context : Context): RecyclerView.Adapter<OrgAdapter.OrgViewHol
     override fun getItemCount(): Int {
         return orgList!!.size
     }
-    class OrgViewHolder(binding : OrgLayoutBinding) : RecyclerView.ViewHolder(binding.root){
+    class OrgViewHolder(binding : OrgLayoutBinding,ctc :Context) : RecyclerView.ViewHolder(binding.root){
         val bind = binding
         fun displayData(data : OrgModel){
             bind.orgdata = data;
